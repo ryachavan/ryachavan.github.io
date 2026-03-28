@@ -20,8 +20,6 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Arya Chavan",
-  description:
-    "Modern developer portfolio with Next.js, Tailwind CSS, and Framer Motion",
 };
 
 export default function RootLayout({
@@ -32,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased text-white ...`}
+        className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased text-white ...`}
       >
         <LenisProvider>
           <Grainient />

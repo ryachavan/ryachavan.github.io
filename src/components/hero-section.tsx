@@ -32,7 +32,7 @@ export function HeroSection() {
             transition={{ delay: 0.2, duration: 0.6 }}
             className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6"
           >
-            <span className="text-glow-purple bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-cyan-400">Arya Chavan</span>
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-purple-200 to-cyan-300 font-bold tracking-tight">Arya Chavan</span>
           </motion.h1>
 
           <motion.h2
