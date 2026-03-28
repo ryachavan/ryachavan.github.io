@@ -147,7 +147,7 @@ export function Grainient() {
                 uZoom: { value: 0.9 },
                 uColor1: { value: new Float32Array(hexToRgb("#2a1570")) },
                 uColor2: { value: new Float32Array(hexToRgb("#000000")) },
-                uColor3: { value: new Float32Array(hexToRgb("#6f20a0")) },
+                uColor3: { value: new Float32Array(hexToRgb("#144e20")) },
             },
         });
 
