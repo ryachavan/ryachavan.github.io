@@ -19,7 +19,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Developer Portfolio",
+  title: "Arya Chavan",
   description:
     "Modern developer portfolio with Next.js, Tailwind CSS, and Framer Motion",
 };
