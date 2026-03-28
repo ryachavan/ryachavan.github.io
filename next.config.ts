@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
     return [
       {
         source: "/legacy/:path*",
-        destination: "https://your-landing-vercel-url.vercel.app/:path*",
+        destination: "https://landing-red-chi.vercel.app/:path*",
       },
     ];
   },
