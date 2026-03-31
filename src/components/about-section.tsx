@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { GlassCard } from "./ui/glass-card";
+import { MagneticButton } from "./ui/magnetic-button";
 import { siteConfig } from "@/config/site";
 import { FileText, Github, Linkedin, Mail } from "lucide-react";
 
@@ -37,24 +38,25 @@ export function AboutSection() {
 
               <div className="w-full md:w-auto flex flex-col gap-4">
                 <div className="flex gap-4 justify-center md:justify-start">
-                  <a href={siteConfig.socials.github} target="_blank" rel="noreferrer" className="p-4 glass rounded-full hover:bg-white/10 transition-colors interactive text-cyan-400 hover:text-cyan-300">
+                  <MagneticButton as="a" href={siteConfig.socials.github} target="_blank" className="!p-4 text-cyan-400 hover:text-cyan-300">
                     <Github className="w-6 h-6" />
-                  </a>
-                  <a href={siteConfig.socials.linkedin} target="_blank" rel="noreferrer" className="p-4 glass rounded-full hover:bg-white/10 transition-colors interactive text-cyan-400 hover:text-cyan-300">
+                  </MagneticButton>
+                  <MagneticButton as="a" href={siteConfig.socials.linkedin} target="_blank" className="!p-4 text-cyan-400 hover:text-cyan-300">
                     <Linkedin className="w-6 h-6" />
-                  </a>
-                  <a href={siteConfig.socials.email} className="p-4 glass rounded-full hover:bg-white/10 transition-colors interactive text-cyan-400 hover:text-cyan-300">
+                  </MagneticButton>
+                  <MagneticButton as="a" href={siteConfig.socials.email} className="!p-4 text-cyan-400 hover:text-cyan-300">
                     <Mail className="w-6 h-6" />
-                  </a>
+                  </MagneticButton>
                 </div>
 
-                <a
+                <MagneticButton
+                  as="a"
                   href="/resume_v2.pdf"
                   target="_blank"
-                  className="mt-4 flex items-center justify-center gap-2 glass px-6 py-4 rounded-full font-medium hover:bg-white/10 transition-colors interactive border border-white/10 text-white"
+                  className="mt-4 !px-6 border border-white/10 text-white w-full md:w-auto"
                 >
                   <FileText className="w-5 h-5" /> Download Resume
-                </a>
+                </MagneticButton>
               </div>
             </div>
           </GlassCard>

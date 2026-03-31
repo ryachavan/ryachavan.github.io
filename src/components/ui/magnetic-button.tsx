@@ -38,7 +38,8 @@ export function MagneticButton({
     setPosition({ x: 0, y: 0 });
   };
 
-  const isInternalLink = as === "a" && href?.startsWith("/");
+  // Don't use Next.js Link for external links, target="_blank", or statically hosted files like PDFs
+  const isInternalLink = as === "a" && href?.startsWith("/") && target !== "_blank" && !href?.match(/\.(pdf|png|jpg|jpeg|svg|gif)$/i);
   const Component: any = isInternalLink ? Link : as;
 
   return (
@@ -55,11 +56,11 @@ export function MagneticButton({
         target={target}
         onClick={onClick}
         className={cn(
-          "relative inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full glass hover:bg-white/10 transition-colors duration-300 interactive group overflow-hidden",
+          "relative inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full glass hover:bg-white/10 transition-colors duration-300 interactive group/btn overflow-hidden",
           className
         )}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300" />
         <span className="relative z-10 font-medium tracking-wide flex items-center justify-center gap-2">
           {children}
         </span>
