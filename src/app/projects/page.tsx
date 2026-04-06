@@ -4,7 +4,7 @@ import { Star, ExternalLink, Github, ArrowLeft } from "lucide-react";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Projects | Developer Portfolio",
+  title: "Arya Chavan | Projects",
   description: "View all my GitHub repositories and open-source contributions",
 };
 
